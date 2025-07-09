@@ -1,5 +1,6 @@
 from pdfrw import PdfReader
 
+
 def list_pdf_form_fields(pdf_path: str):
     pdf = PdfReader(pdf_path)
     field_names = set()
@@ -10,6 +11,7 @@ def list_pdf_form_fields(pdf_path: str):
             if field_name:
                 field_names.add(field_name.to_unicode().strip('()'))
     return field_names
+
 
 # Использование:
 fields = list_pdf_form_fields('inbulk_ttn.pdf')
